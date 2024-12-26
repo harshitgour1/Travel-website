@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Wanderlust</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap">
+</head>
+<body>
+    <!-- Previous body content remains the same -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Wanderlust</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="destinations.html" class="active">Destinations</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="tips.html">Travel Tips</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <img src="icons/brightness.png" class="sun-icon" style="display: block;" alt="Sun Icon"> 
+                <img src="icons/night-mode.png" class="moon-icon" style="display: none;" alt="Moon Icon"> 
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Popular Destinations</h1>
+        <p>Explore our handpicked collection of amazing places</p>
+    </header>
+
+    <main class="destinations-grid">
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+            <div class="destination-content">
+                <h2>Paris, France</h2>
+                <p>The city of love and lights, famous for its iconic architecture and rich culture.</p>
+                <a href="#" class="destination-link">Explore Paris</a>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1513181335544-7c7f367bde7a" alt="Tokyo">
+            <div class="destination-content">
+                <h2>Tokyo, Japan</h2>
+                <p>A vibrant metropolis blending ultra-modern and traditional elements.</p>
+                <a href="#" class="destination-link">Explore Tokyo</a>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52" alt="Santorini">
+            <div class="destination-content">
+                <h2>Santorini, Greece</h2>
+                <p>Stunning white architecture and breathtaking Mediterranean views.</p>
+                <a href="#" class="destination-link">Explore Santorini</a>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" alt="Bali">
+            <div class="destination-content">
+                <h2>Bali, Indonesia</h2>
+                <p>Tropical paradise with rich culture and stunning landscapes.</p>
+                <a href="#" class="destination-link">Explore Bali</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Wanderlust</h4>
+                <p>Sharing travel stories and inspiration since 2024.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">About</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt=""></a>
+                    <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt=""></a>
+                    <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+    <script>initTheme();</script>
+</body>
+</html>

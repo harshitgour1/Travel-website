@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Travel Blog</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap">
+</head>
+<body>
+    <div id="loader" class="loader">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+        <lottie-player src="https://lottie.host/0c7b5a6c-95fb-4f17-92e8-d18e6bdc934c/cicjA1BC89.json" 
+                       background="transparent" 
+                       speed="1" 
+                       style="width: 300px; height: 300px;" 
+                       loop 
+                       autoplay>
+        </lottie-player>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Wanderlust</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="tips.html">Travel Tips</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <img src="icons/brightness.png" class="sun-icon" style="display: block;" alt="Sun Icon"> 
+                <img src="icons/night-mode.png" class="moon-icon" style="display: none;" alt="Moon Icon"> 
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/1618/1618-720.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 class="fade-in">Explore the World</h1>
+            <p class="slide-up">Discover breathtaking destinations and unforgettable adventures</p>
+            <a href="#latest" class="cta-button">Start Exploring</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="latest" class="latest-updates">
+            <h2 class="section-title">Latest Adventures</h2>
+            <div class="posts-grid">
+                <article class="post fade-in">
+                    <img src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7" alt="Paris streets">
+                    <div class="post-content">
+                        <h3>Paris in Spring</h3>
+                        <p>Experience the magic of Paris during its most beautiful season.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post fade-in">
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e" alt="Bali beaches">
+                    <div class="post-content">
+                        <h3>Bali Paradise</h3>
+                        <p>Discover the hidden gems of Indonesia's most famous island.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post fade-in">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Swiss Alps">
+                    <div class="post-content">
+                        <h3>Swiss Adventure</h3>
+                        <p>Journey through the majestic Swiss Alps in winter.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Wanderlust</h4>
+                <p>Sharing travel stories and inspiration since 2024.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">About</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt=""></a>
+                    <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt=""></a>
+                    <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+    <script>initTheme();</script>
+
+    <script>
+            setTimeout(() => {
+                loader.style.display = 'none'; // Hide the loader
+                content.style.display = 'block'; // Show the content
+                setTimeout(() => {
+                    content.classList.add('visible'); // Add class to trigger animation
+                }, 10); // Small timeout to ensure the display change takes effect
+            }, 2000); // Adjust this duration as needed
+    </script>
+</body>
+</html>
