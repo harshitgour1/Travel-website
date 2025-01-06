@@ -193,53 +193,80 @@ body {
 
 /* Footer */
 
-.footer-section {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 20px; 
-}
-
 .footer {
-    background-color: #f8f9fa;
-    padding: 4rem 2rem 2rem;
-    margin-top: 4rem;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Centered text */
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space between sections */
+    flex-wrap: wrap; /* Wrap sections on smaller screens */
+}
+
+.footer-section {
+    flex: 1; /* Equal width for all sections */
+    margin: 10px; /* Margin around sections */
 }
 
 .footer-section h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--text-color);
+    margin-bottom: 10px; /* Space below headings */
 }
 
 .footer-section a {
-    display: block;
-    color: var(--text-color);
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    transition: var(--transition);
+    display: block; /* Block display for links */
+    margin: 5px 0; /* Margin for links */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
 }
 
 .footer-section a:hover {
-    color: var(--primary-color);
+    text-decoration: underline; /* Underline on hover */
+}
+
+#subscribe-form {
+    display: flex; /* Flexbox for form layout */
+    justify-content: center; /* Center the form */
+}
+
+#subscribe-form input {
+    padding: 10px; /* Padding for input */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 5px; /* Space between input and button */
+}
+
+#subscribe-form button {
+    padding: 10px 15px; /* Padding for button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+#subscribe-form button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Space above copyright */
+    font-size: 14px; /* Font size for copyright */
+    color: #6c757d; /* Gray color for copyright */
 }
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 15px;
+    margin-top: 10px;
+
 }
 
 .social-links img {
-    width: 24px;
-    height: 24px; 
+    width: 30px;
+    height: auto; 
     transition: transform 0.3s ease;
 }
 
@@ -247,12 +274,12 @@ body {
     transform: scale(1.1); 
 }
 
-.footer-bottom {
+/* .footer-bottom {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid #ddd;
-}
+} */
 
 /* Animations */
 .fade-in {
@@ -369,7 +396,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(178, 226, 156, 0.9); /* Light blue background with some transparency */
+        background-color: rgba(178, 226, 156, 0.5); /* Light blue background with some transparency */
         z-index: 9999; /* On top of everything */
         display: flex; /* Center the Lottie animation */
         justify-content: center;
@@ -377,3 +404,57 @@ body {
     
 }
 
+/* Loader Slide Out Animation */
+.loader-slide-out {
+    animation: slide-out 0.5s forwards; /* Slide out effect */
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0); /* Start position */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateX(100%); /* Move out to the right */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Background of the scrollbar track */
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a9c6e6; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a9c6e6; /* Color of the thumb on hover */
+    transition: background 0.3s;
+}
+
+/* Custom Scrollbar for Dark Theme */
+[data-theme='dark'] ::-webkit-scrollbar {
+    background: #b6eca6; /* Dark background for the scrollbar track */
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+    background: #555; /* Darker color for the scrollbar thumb */
+}
+
+/* Custom Scrollbar for Light Theme */
+[data-theme='light'] ::-webkit-scrollbar {
+    background: #f1f1f1; /* Light background for the scrollbar track */
+}
+
+[data-theme='light'] ::-webkit-scrollbar-thumb {
+    background: #888; /* Lighter color for the scrollbar thumb */
+}
